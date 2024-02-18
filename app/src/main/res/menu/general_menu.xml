@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:title="@string/autoDetection"
+        android:id="@+id/AutoTrDetection"
+        app:showAsAction="never"
+        android:checkable="true"
+        android:orderInCategory="1"
+
+        />
+
+    <item
+        android:title="@string/settings"
+        android:id="@+id/impostazioni"
+        app:showAsAction="never"
+        android:orderInCategory="2"/>
+</menu>

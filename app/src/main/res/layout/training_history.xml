@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_viewBG"
+        app:cardCornerRadius="12dp"
+        app:contentPadding="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/training_history"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/training_history"
+                android:textColor="@android:color/secondary_text_dark"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <ViewStub
+                android:id="@+id/tr1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/training_recap" />
+
+            <ViewStub
+                android:id="@+id/tr2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout="@layout/training_recap" />
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

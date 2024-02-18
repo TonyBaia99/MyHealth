@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="card_viewBG">@android:color/darker_gray</color>
+    <color name="axesColor">@color/black</color>
+    <color name="textColor">@color/black</color>
+</resources>

@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_viewBG"
+        app:cardCornerRadius="12dp"
+        app:contentPadding="12dp">
+
+        <RelativeLayout
+            android:id="@+id/myRelativeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/daily_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/steps_pb"
+                android:fontFamily="monospace"
+                android:text="@string/daily_activity"
+                android:textSize="12sp"
+                android:textStyle="bold|italic" />
+
+            <ProgressBar
+                android:id="@+id/steps_pb"
+                style="@style/CircularDeterminateProgressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:max="10000"
+                android:padding="25dp"
+                android:progress="5000"
+                android:scaleX="2.5"
+                android:scaleY="2.5" />
+
+            <ProgressBar
+                android:id="@+id/activity_time_pb"
+                style="@style/CircularDeterminateProgressBar1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:max="30"
+                android:padding="25dp"
+                android:progress="20"
+                android:scaleX="2"
+                android:scaleY="2" />
+
+            <ProgressBar
+                android:id="@+id/calories_pb"
+                style="@style/CircularDeterminateProgressBar2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:max="300"
+                android:padding="25dp"
+                android:progress="100"
+                android:scaleX="1.5"
+                android:scaleY="1.5" />
+
+            <ImageView
+                android:id="@+id/steps_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/daily_activity"
+                android:layout_alignParentStart="true"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                app:srcCompat="@drawable/steps" />
+
+            <ImageView
+                android:id="@+id/activity_time_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/daily_activity"
+                android:layout_toEndOf="@id/steps_icon"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                app:srcCompat="@drawable/activity_time" />
+
+            <ImageView
+                android:id="@+id/calories_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/daily_activity"
+                android:layout_toEndOf="@id/activity_time_icon"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                app:srcCompat="@drawable/calories" />
+
+            <TextView
+                android:id="@+id/steps_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/steps_icon"
+                android:layout_alignStart="@id/steps_icon"
+                android:layout_alignEnd="@id/steps_icon"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/current_steps"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/activity_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_time_icon"
+                android:layout_alignStart="@id/activity_time_icon"
+                android:layout_alignEnd="@id/activity_time_icon"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/time_value" />
+
+            <TextView
+                android:id="@+id/calories_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calories_icon"
+                android:layout_alignStart="@id/calories_icon"
+                android:layout_alignEnd="@id/calories_icon"
+                android:fontFamily="sans-serif-black"
+                android:gravity="center"
+                android:text="@string/calories_value" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

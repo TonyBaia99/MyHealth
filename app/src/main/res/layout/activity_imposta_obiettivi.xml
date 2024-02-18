@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_viewBG"
+        app:contentPadding="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/impostaObiettivi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="@string/imposta_obiettivi"
+                android:textSize="24sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/steps_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/edit_steps"
+                android:layout_below="@id/impostaObiettivi"
+                android:layout_alignEnd="@id/activity_duration"
+                android:layout_alignBottom="@id/edit_steps"
+                android:layout_alignParentStart="true"
+                android:fontFamily="monospace"
+                android:gravity="center|start"
+                android:padding="8dp"
+                android:text="@string/steps"
+                android:textSize="12sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edit_steps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/impostaObiettivi"
+                android:layout_toStartOf="@id/steps_2"
+                android:layout_toEndOf="@id/steps_1"
+                android:gravity="center"
+                android:hint="@string/steps_goal"
+                android:inputType="numberDecimal"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/steps_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edit_steps"
+                android:layout_alignParentEnd="true"
+                android:text="passi" />
+
+            <TextView
+                android:id="@+id/activity_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/steps_1"
+                android:layout_alignTop="@id/edit_duration"
+                android:layout_alignBottom="@id/edit_duration"
+                android:layout_alignParentStart="true"
+                android:fontFamily="monospace"
+                android:gravity="center|start"
+                android:padding="8dp"
+                android:text="@string/activity_duration"
+                android:textSize="12sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edit_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_steps"
+                android:layout_toStartOf="@id/minuti1"
+                android:layout_toEndOf="@id/activity_duration"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/activity_duration_goal"
+                android:inputType="numberDecimal"
+                tools:ignore="TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/minuti1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edit_duration"
+                android:layout_alignParentEnd="true"
+                android:text="minuti" />
+
+            <TextView
+                android:id="@+id/calories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/activity_duration"
+                android:layout_alignTop="@id/edit_cal"
+                android:layout_alignEnd="@id/activity_duration"
+                android:layout_alignBottom="@id/edit_cal"
+                android:layout_alignParentStart="true"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/calories"
+                android:textSize="12sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edit_cal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_duration"
+                android:layout_toStartOf="@id/calories1"
+                android:layout_toEndOf="@id/calories"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/calories_activity_goal"
+                android:inputType="numberDecimal"
+                tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+            <TextView
+                android:id="@+id/calories1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edit_cal"
+                android:layout_alignParentEnd="true"
+                android:text="kcal" />
+
+            <TextView
+                android:id="@+id/sleep_goal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/calories"
+                android:layout_alignParentStart="true"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="@string/sleep_goal"
+                android:textSize="12sp"
+                android:textStyle="bold|italic" />
+
+            <EditText
+                android:id="@+id/edit_sleep_ore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep_goal"
+                android:layout_toStartOf="@id/ore1"
+                android:ems="15"
+                android:gravity="center"
+                android:hint="@string/hours_of_sleep_goal"
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/ore1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edit_sleep_ore"
+                android:layout_alignEnd="@id/activity_duration"
+                android:text="ore" />
+
+            <EditText
+                android:id="@+id/edit_sleep_min"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep_goal"
+                android:layout_toStartOf="@id/minuti2"
+                android:layout_toEndOf="@id/ore1"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/minutes_of_sleep_goal"
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+            <TextView
+                android:id="@+id/minuti2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edit_sleep_min"
+                android:layout_alignParentEnd="true"
+                android:text="min." />
+
+            <TextView
+                android:id="@+id/glass_of_water_goal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep_goal"
+                android:layout_alignTop="@id/edit_glasses"
+                android:layout_alignEnd="@id/activity_duration"
+                android:layout_alignBottom="@id/edit_glasses"
+                android:layout_alignParentStart="true"
+                android:fontFamily="monospace"
+                android:gravity="center|start"
+                android:padding="8dp"
+                android:text="@string/glasses_of_water"
+                android:textSize="12sp"
+                android:textStyle="bold|italic"
+                tools:layout_below="@id/edit_sleep_ore" />
+
+            <EditText
+                android:id="@+id/edit_glasses"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/edit_sleep_min"
+                android:layout_toEndOf="@id/glass_of_water_goal"
+                android:ems="10"
+                android:gravity="center"
+                android:hint="@string/glasses_of_water_goal"
+                android:inputType="numberDecimal"
+                tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/save_goals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/cardView1"
+        android:text="@string/save_goals" />
+
+</RelativeLayout>

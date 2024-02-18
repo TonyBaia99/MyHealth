@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/card_viewBG"
+        app:cardCornerRadius="12dp"
+        app:contentPadding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/body_composition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:paddingBottom="4dp"
+                android:text="@string/body_composition"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/body_composition_icon"
+                android:layout_width="64dp"
+                android:layout_height="48dp"
+                android:layout_below="@id/body_composition"
+                android:paddingTop="10dp"
+                android:paddingBottom="8dp"
+                app:srcCompat="@drawable/weight_scale_icon" />
+
+            <TextView
+                android:id="@+id/weight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body_composition_icon"
+                android:layout_alignStart="@id/body_composition_icon"
+                android:layout_toStartOf="@id/kg"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="@string/body_weight_value"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/kg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body_composition_icon"
+                android:layout_alignEnd="@id/body_composition_icon"
+                android:fontFamily="monospace"
+                android:text="Kg"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/bmi_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body_composition"
+                android:layout_alignEnd="@id/body_composition"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:srcCompat="@drawable/bmi_icon" />
+
+            <TextView
+                android:id="@+id/bmi_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/bmi_icon"
+                android:layout_alignStart="@id/bmi_icon"
+                android:layout_alignEnd="@id/bmi_icon"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="@string/bmi_value"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/p_height_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/body_composition"
+                android:layout_centerInParent="true"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                app:srcCompat="@drawable/height_icon" />
+
+            <TextView
+                android:id="@+id/height"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/p_height_icon"
+                android:layout_alignStart="@id/p_height_icon"
+                android:layout_toStartOf="@id/cm"
+                android:fontFamily="monospace"
+                android:gravity="center"
+                android:text="@string/height_value"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/cm"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/p_height_icon"
+                android:layout_alignEnd="@id/p_height_icon"
+                android:fontFamily="monospace"
+                android:text="cm"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/myMap"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/myCardView"
+        android:layout_alignParentTop="true"
+        tools:context=".TrainingFragment" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/myCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/card_viewBG"
+        app:contentPadding="4dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/durata"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:gravity="center"
+                android:text="00:00:00:00"
+                android:textSize="34sp" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/distanceCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/durata"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/barrier"
+                app:cardBackgroundColor="@color/card_viewBG"
+                app:contentPadding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/distanceTr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Distanza"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/distanceValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/distanceTr"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/km1"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:text="0.00"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/km1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/distanceTr"
+                        android:layout_alignTop="@id/distanceValue"
+                        android:layout_alignBottom="@id/distanceValue"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:text="Km"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/speedCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/durata"
+                android:layout_alignParentEnd="true"
+                android:layout_toEndOf="@id/barrier"
+                app:cardBackgroundColor="@color/card_viewBG"
+                app:contentPadding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/speedTr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Velocità"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/speedValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/speedTr"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/kmh"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:text="--"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kmh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/speedTr"
+                        android:layout_alignTop="@id/speedValue"
+                        android:layout_alignBottom="@id/speedValue"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:text="Km/h"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/avgSpeedCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/speedCardView"
+                android:layout_alignParentEnd="false"
+                android:layout_toEndOf="@id/barrier"
+                app:cardBackgroundColor="@color/card_viewBG"
+                app:contentPadding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/avgSpeedTr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Velocità Media"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/avgSpeedValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avgSpeedTr"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/kmh1"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kmh1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/avgSpeedTr"
+                        android:layout_alignTop="@id/avgSpeedValue"
+                        android:layout_alignBottom="@id/avgSpeedValue"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:text="Km/h"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/caloriesCardView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/distanceCardView"
+                android:layout_alignParentStart="true"
+                android:layout_toStartOf="@id/barrier"
+                app:cardBackgroundColor="@color/card_viewBG"
+                app:contentPadding="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/caloriesTr"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="Calorie"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/caloreisValue"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/caloriesTr"
+                        android:layout_alignParentStart="true"
+                        android:layout_toStartOf="@id/kcal"
+                        android:fontFamily="monospace"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textSize="28sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/kcal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/caloriesTr"
+                        android:layout_alignTop="@id/caloreisValue"
+                        android:layout_alignBottom="@id/caloreisValue"
+                        android:layout_alignParentEnd="true"
+                        android:gravity="center"
+                        android:text="Kcal"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Space
+                android:id="@+id/barrier"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/distanceCardView"
+                android:layout_alignBottom="@id/caloriesCardView"
+                android:layout_centerInParent="true" />
+
+            <Button
+                android:id="@+id/avvia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avgSpeedCardView"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:text="Avvia" />
+
+            <Button
+                android:id="@+id/pausa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avgSpeedCardView"
+                android:layout_centerInParent="false"
+                android:layout_centerHorizontal="true"
+                android:text="Pausa"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/riprendi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avgSpeedCardView"
+                android:layout_alignParentEnd="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toEndOf="@id/barrier"
+                android:text="Riprendi"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/fine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avgSpeedCardView"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_toStartOf="@id/barrier"
+                android:text="Fine"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

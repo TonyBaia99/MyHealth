@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardBackgroundColor="@color/card_viewBG"
+        app:cardCornerRadius="12dp"
+        app:contentPadding="12dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/sleep"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="monospace"
+                android:text="@string/sleep"
+                android:textSize="14sp"
+                android:textStyle="bold|italic" />
+
+            <TextView
+                android:id="@+id/hours_of_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep"
+                android:fontFamily="monospace"
+                android:text="@string/hours_value"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/ore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep"
+                android:layout_alignBaseline="@id/hours_of_sleep"
+                android:layout_toEndOf="@id/hours_of_sleep"
+                android:fontFamily="monospace"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/hours"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/minutes_of_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep"
+                android:layout_alignBaseline="@id/hours_of_sleep"
+                android:layout_toEndOf="@id/ore"
+                android:fontFamily="monospace"
+                android:text="@string/minutes_value"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/minuti"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep"
+                android:layout_alignBaseline="@id/hours_of_sleep"
+                android:layout_toEndOf="@id/minutes_of_sleep"
+                android:fontFamily="monospace"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/minutes"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/start_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep"
+                android:layout_alignBaseline="@id/hours_of_sleep"
+                android:layout_toStartOf="@id/separetor"
+                android:fontFamily="monospace"
+                android:text="@string/start_sleep_value"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/separetor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sleep"
+                android:layout_alignBaseline="@id/start_sleep"
+                android:layout_toStartOf="@id/end_sleep"
+                android:fontFamily="monospace"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:text="@string/from_to"
+                android:textSize="12sp"
+                tools:paddingEnd="8dp"
+                tools:paddingStart="8dp" />
+
+            <TextView
+                android:id="@+id/end_sleep"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/start_sleep"
+                android:layout_alignParentEnd="true"
+                android:fontFamily="monospace"
+                android:text="@string/end_sleep_value"
+                android:textSize="16sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

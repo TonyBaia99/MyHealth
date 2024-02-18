@@ -1,0 +1,50 @@
+<resources>
+    <string name="app_name" translatable="false">MyHealth</string>
+    <string name="home">Home</string>
+    <string name="training">Training</string>
+    <string name="profile">Profile</string>
+    <string name="set_elements">Set Elements</string>
+    <string name="summaries">Summaries</string>
+    <string name="settings">Settings</string>
+    <string name="daily_activity">Daily Activity</string>
+    <string name="steps">Steps</string>
+    <string name="current_steps" translatable="false">0</string>
+    <string name="slash" translatable="false">/</string>
+    <string name="steps_goal" translatable="false">10000</string>
+    <string name="percentage_pbSteps" translatable="false">0%</string>
+    <string name="sleep">Sleep</string>
+    <string name="hours_value" translatable="false">0</string>
+    <string name="hours">hours</string>
+    <string name="minutes_value" translatable="false">0</string>
+    <string name="minutes" translatable="false">min.</string>
+    <string name="start_sleep_value" translatable="false">23</string>
+    <string name="end_sleep_value" translatable="false">8</string>
+    <string name="from_to">to</string>
+    <string name="training_history">Training history</string>
+    <string name="no_training">There are no recent training</string>
+    <string name="running">Running</string>
+    <string name="walking">Walking</string>
+    <string name="time_value" translatable="false">0</string>
+    <string name="calories_value" translatable="false">0</string>
+    <string name="distance_value" translatable="false">0.0</string>
+    <string name="body_composition">Body composition</string>
+    <string name="body_weight_value" translatable="false">70</string>
+    <string name="bmi_value" translatable="false">23,12</string>
+    <string name="height_value" translatable="false">174</string>
+    <string name="glasses_of_water">Glasses of water</string>
+    <string name="imposta_obiettivi">Set goals</string>
+    <string name="activity_duration">Activity duration</string>
+    <string name="calories">Activity Calories</string>
+    <string name="sleep_goal">Sleep duration</string>
+    <string name="activity_duration_goal" translatable="false">30</string>
+    <string name="calories_activity_goal" translatable="false">500</string>
+    <string name="hours_of_sleep_goal" translatable="false">8</string>
+    <string name="minutes_of_sleep_goal" translatable="false">0</string>
+    <string name="glasses_of_water_goal" translatable="false">10</string>
+    <string name="save_goals">Save</string>
+    <string name="autoDetection">Automatic tr. Detection</string>
+    <string name="weight">weight</string>
+    <string name="height">height</string>
+    <string name="consiglio" translatable="false">Si prega di selezionare una delle 3 scelte sopra in base alle informazioni che si vogliono vedere</string>
+
+</resources>

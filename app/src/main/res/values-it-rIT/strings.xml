@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="home">Pagina Iniziale</string>
+    <string name="training">Allenamento</string>
+    <string name="profile">Profilo</string>
+    <string name="set_elements">Gestisci Elementi</string>
+    <string name="summaries">Riepiloghi</string>
+    <string name="settings">Impostazioni</string>
+    <string name="daily_activity">Attività giornaliera</string>
+    <string name="steps">Passi</string>
+    <string name="sleep">Sonno</string>
+    <string name="hours">ore</string>
+    <string name="from_to">fino alle</string>
+    <string name="training_history">Cronologia allenamento</string>
+    <string name="no_training">Non ci sono allenamenti recenti</string>
+    <string name="running">Corsa</string>
+    <string name="walking">Camminata</string>
+    <string name="body_composition">Composizione corporea</string>
+    <string name="glasses_of_water">Bicchieri d\'acqua</string>
+    <string name="imposta_obiettivi">Imposta obiettivi</string>
+    <string name="activity_duration">Durata dell\'attività</string>
+    <string name="calories">Calorie di attività</string>
+    <string name="sleep_goal">Durata del sonno</string>
+    <string name="save_goals">Salva</string>
+    <string name="autoDetection">Rilevamento autom. allenamenti</string>
+    <string name="weight">Peso</string>
+    <string name="height">Altezza</string>
+</resources>

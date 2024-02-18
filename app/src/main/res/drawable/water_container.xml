@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:top="-4dp">
+        <shape
+            android:shape="rectangle"
+            android:useLevel="false">
+            <stroke
+                android:color="@color/black"
+                android:width="2dp"/>
+            <size
+                android:width="60dp"
+                android:height="100dp" />
+            <solid
+                android:color="@color/card_viewBG"/>
+        </shape>
+    </item>
+
+    <item>
+        <clip
+            android:clipOrientation="vertical"
+            android:gravity="bottom">
+            <shape
+                android:shape="rectangle"
+                android:useLevel="true">
+                <stroke
+                    android:color="@color/black"
+                    android:width="2dp"/>
+                <size android:width="60dp"/>
+                <gradient
+                    android:startColor="@color/blue"
+                    android:endColor="@color/blue"/>
+            </shape>
+        </clip>
+    </item>
+</layer-list>
